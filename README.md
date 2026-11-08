@@ -8,6 +8,8 @@ distribuyen los archivos de datos del juego (AIN, ALD, DLL) ni el ejecutable:
 el parche se construye en tu equipo. Solo se incluye el texto traducido, las
 herramientas y un INI de configuración corregido.
 
+[![Invítame a un café en Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/zhaskk829)
+
 > Comprá el juego original para apoyar a sus creadores. Este es un proyecto de
 > traducción hecho por aficionados y no incluye material con copyright.
 
@@ -127,6 +129,12 @@ detalles en [`docs/VERIFICACION.md`](docs/VERIFICACION.md).
 - Generada con Marian NMT y revisión posterior.
 - Probada en PortProton con `PROTON_LG_10-28`.
 - Se aceptan correcciones y mejoras de redacción.
+
+## Apoyar el proyecto
+
+Si la traducción te resultó útil, podés invitarme un café en Ko-fi:
+
+**https://ko-fi.com/zhaskk829**
 
 ## Licencia y aviso legal
 

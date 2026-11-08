@@ -221,6 +221,11 @@ def main():
         print("\nCopia el AIN generado a las tres rutas del juego.")
         print("Lee README.md para instalar y configurar PortProton.")
 
+    print(
+        "\n¿Te ha sido útil? Puedes apoyar el proyecto en "
+        "https://ko-fi.com/zhaskk829"
+    )
+
 
 if __name__ == "__main__":
     main()
