@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Author: nahuel
+#Rance02.exe
+#Rating=1-5
+export PW_WINE_USE="PROTON_LG"
+export PW_PREFIX_NAME="DEFAULT"
+export FILE_SHA256SUM="3b1509f56a8f2f2e03cc15059cd0bfb170b32bda849be1ea62abef45509ac7d8"

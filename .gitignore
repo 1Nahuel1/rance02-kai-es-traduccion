@@ -1,0 +1,12 @@
+*.ain
+*.ald
+*.alk
+*.exe
+*.dll
+*.bak
+*.zip
+SaveData/
+__pycache__/
+*.pyc
+.rance02_es_*
+rance02.ain.es
