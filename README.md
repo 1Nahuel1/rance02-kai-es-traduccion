@@ -97,8 +97,9 @@ PortProton y `PROTON_LG_10-28` se ven correctamente palabras como
   o el nombre no coincide exactamente.
 - **`i`/`l` se ven como `:` o desaparecen:** estás usando el Wine del sistema.
   Usá PortProton con `PROTON_LG`.
-- **“Fallo al inicializar el complemento DrawMovie2”:** es un aviso del plugin
-  de video. Pulsá Aceptar y el juego continúa.
+- **“Fallo al inicializar el complemento DrawMovie2”:** corregido en la
+  versión actual. Si usás una versión anterior, actualizá `fuente/edit_es.txt`;
+  los nombres internos de los plugins no deben traducirse.
 - **Error por `AliceStart.ini` / sección `[Movie]` duplicada:** usá
   `config/AliceStart.ini`.
 - **El juego no arranca:** lanzalo desde PortProton y comprobá el prefix y el
@@ -112,13 +113,29 @@ PortProton y `PROTON_LG_10-28` se ven correctamente palabras como
 3. Se reensambla el AIN con el texto traducido y el ajuste de ancho.
 4. Se instala en las tres rutas del juego.
 
+## Correcciones de la versión actual
+
+- **Plugins:** se restauraron los identificadores internos `DrawGraph` y
+  `DrawMovie2`, que se habían traducido por error como `DibujarGrafico` y
+  `DibujarPelicula2`. El motor no podía cargarlos y el juego mostraba
+  “Fallo al inicializar el complemento DrawMovie2” o quedaba en pantalla negra.
+- **Nombre de personaje:** `Silla` → `Sill` en el menú de campamento, la
+  pantalla de estado y los textos de combate.
+- **Menú de campamento:** `Utiliza Pertenece` → `Usar objeto` y
+  `Cerrar Camperia` → `Cerrar campamento`.
+- **Longitudes:** se revisaron y reescribieron las líneas que excedían el ancho
+  del cuadro de diálogo o de la narración. La comprobación final da **0**
+  líneas desbordadas.
+- **Verificación:** el AIN reconstruido desde el AIN original coincide byte a
+  byte con el probado en PortProton.
+
 ## Verificación
 
 El AIN generado a partir de la versión original usada en este proyecto tiene:
 
-- Tamaño: `435756` bytes
-- MD5: `db6d0e2ab5ddaf35208efebc7a718011`
-- SHA256: `ed66f4543aba1751211471262faec238cf59d2d59872f579e0c56379531cd637`
+- Tamaño: `433420` bytes
+- MD5: `fd1a580f55d1f22d3983cf42fb1bdeba`
+- SHA256: `9c42621b303d3d3d026ce36f1abf4a767a53d544585440e2c640abdc0a8a5320`
 
 Si tu copia del juego es la misma versión, el hash debería coincidir. Más
 detalles en [`docs/VERIFICACION.md`](docs/VERIFICACION.md).

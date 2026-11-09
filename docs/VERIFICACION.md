@@ -6,9 +6,9 @@ A partir del AIN original de la versión usada en este proyecto:
 
 | Dato | Valor |
 |---|---|
-| Tamaño | `435756` bytes |
-| MD5 | `db6d0e2ab5ddaf35208efebc7a718011` |
-| SHA256 | `ed66f4543aba1751211471262faec238cf59d2d59872f579e0c56379531cd637` |
+| Tamaño | `433420` bytes |
+| MD5 | `fd1a580f55d1f22d3983cf42fb1bdeba` |
+| SHA256 | `9c42621b303d3d3d026ce36f1abf4a767a53d544585440e2c640abdc0a8a5320` |
 
 Si tu copia del juego es la misma versión, el AIN generado con
 `herramientas/aplicar_traduccion.py` debería tener el mismo hash.
@@ -22,18 +22,30 @@ Si tu copia del juego es la misma versión, el AIN generado con
 - El AIN incluye el ajuste de ancho de `i`/`l` (`PUSH 3` → `PUSH 6`).
 - Al reensamblar el código, AliceTools deduplica 5 IDs de cadenas repetidas.
   No afecta al texto visible.
+- Comprobación de ancho: **0** líneas desbordadas.
+
+## Correcciones aplicadas
+
+- Restaurados los identificadores internos `DrawGraph` y `DrawMovie2` (antes
+  traducidos como `DibujarGrafico` y `DibujarPelicula2`), que impedían cargar
+  los plugins y provocaban el error de `DrawMovie2` o una pantalla negra.
+- Corregido el nombre de personaje `Silla` → `Sill`.
+- Corregidos `Utiliza Pertenece` → `Usar objeto` y `Cerrar Camperia` →
+  `Cerrar campamento`.
+- Reajustadas las líneas largas para que no se corten en diálogo ni narración.
 
 ## Fuente
 
 | Archivo | SHA256 |
 |---|---|
-| `fuente/edit_es.txt` | `0e04bf0924f0ae846a4fa1e3baa81c3f0207572ddf1be59cc69db5f9e81f24c0` |
-| `fuente/cache_es_v2.json` | `bc6f5c9cec8368431718d91805a2673d04f72f7c67bdbe407d58eb38d8b7eb3f` |
+| `fuente/edit_es.txt` | `42d01501d12797a1405642d0f6f318e7088419bf3333a8e8367e934904314e07` |
+| `fuente/cache_es_v2.json` | `544684434a787872bc2f110ab6e58d613d05212312b380abac2f601a24e09dd8` |
 
 ## Prueba de funcionamiento
 
 - PortProton 1.7.5
 - Runner: `PROTON_LG_10-28`
 - Prefix: `DEFAULT`
-- Resultado: diálogo en español con `i`/`l` correctos; por ejemplo
-  `Permíteme`, `explicando`, `llamado`, `jóvenes`.
+- Resultado: arranque correcto, carga de partida, diálogo largo sin cortes y
+  menú de campamento con los textos corregidos. También se ven correctamente
+  `i`/`l` en palabras como `Permíteme`, `explicando`, `llamado`, `jóvenes`.
