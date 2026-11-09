@@ -123,6 +123,10 @@ PortProton y `PROTON_LG_10-28` se ven correctamente palabras como
   pantalla de estado y los textos de combate.
 - **Menú de campamento:** `Utiliza Pertenece` → `Usar objeto` y
   `Cerrar Camperia` → `Cerrar campamento`.
+- **Compatibilidad con `Ñ`:** las palabras que requerían `ñ` se reescribieron
+  con sinónimos sin ese carácter (`señor` → `caballero`/`don`, `niño` → `chico`,
+  `pequeño` → `chico`/`menor`, etc.) porque el motor y la codificación CP932 no
+  las renderizan correctamente.
 - **Longitudes:** se revisaron y reescribieron las líneas que excedían el ancho
   del cuadro de diálogo o de la narración. La comprobación final da **0**
   líneas desbordadas.
@@ -133,9 +137,9 @@ PortProton y `PROTON_LG_10-28` se ven correctamente palabras como
 
 El AIN generado a partir de la versión original usada en este proyecto tiene:
 
-- Tamaño: `433420` bytes
-- MD5: `fd1a580f55d1f22d3983cf42fb1bdeba`
-- SHA256: `9c42621b303d3d3d026ce36f1abf4a767a53d544585440e2c640abdc0a8a5320`
+- Tamaño: `433367` bytes
+- MD5: `c3cf4ea23847890a648803c6abee299f`
+- SHA256: `885df3b24d7c31e6d54facfa3149a5e1cf93f6daffaf88c36806c32ef813111d`
 
 Si tu copia del juego es la misma versión, el hash debería coincidir. Más
 detalles en [`docs/VERIFICACION.md`](docs/VERIFICACION.md).
